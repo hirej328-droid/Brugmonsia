@@ -9,16 +9,52 @@
 </head>
 <body>
 <!-- ALL YOUR HTML  GOES HERE  -->
-  
- </body>
 
-    <div>
-        <img src=”Homepage.png”/>
-23
+
+    <div class = "homepage-image">
+        <img class="logo" src="Homepage.png"/>
+        <img class="left-lace" src="lace.jpg"/>
+        <img class="top-lace" src="lace.jpg"/>
+        <img class="right-lace" src="lace.jpg"/>
+        <img class="bottom-lace" src="lace.jpg"/>
     </div>
 
   <style>
-  /* ALL YOUR CSS GOES HERE */
+    .homepage-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .homepage-image .logo{
+      width: 60%;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+
+    .left-lace {
+      height: 100vh;
+      width: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* z-index: 10; */
+
+    }
+
+  .top-lace {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh; 
+  width: auto;
+
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100%);
+}
+
+
+
     
   </style>
 </html>
