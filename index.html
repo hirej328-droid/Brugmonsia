@@ -12,12 +12,11 @@
 
 
     <div class = "homepage-image">
-        <a href="Pieces.html">
-       <img class="logo" src="Homepage.png"/></a>
-        <img class="left-lace" src="lace.jpg"/>
-        <img class="top-lace" src="lace.jpg"/>
-        <img class="right-lace" src="lace.jpg"/>
-        <img class="bottom-lace" src="lace.jpg"/>
+        <a href="Pieces.html"><img class="logo" src="Homepage.png"/></a>
+        <img class="lace left-lace" src="lace.jpg"/>
+        <img class=" top-lace" src="lace-top.jpg"/>
+        <img class="lace right-lace" src="lace.jpg"/>
+        <img class="lace bottom-lace" src="lace-top.jpg"/>
     </div>
 
   <style>
@@ -32,6 +31,16 @@
       margin-right: 20%;
     }
 
+    .lace {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+
+  background-image: url("lace.png");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
     .left-lace {
       height: 100vh;
       width: auto;
@@ -42,20 +51,42 @@
 
     }
 
-  .top-lace {
+.right-lace {
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100vh;
+
+  transform: scaleX(-1);
+}
+.top-lace {
   position: absolute;
   top: 0;
   left: 0;
 
-  height: 100vh; 
-  width: auto;
+  width: 100vw;
+  height: 60px;
 
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-100%);
+  background-image: url("lace-top.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
 }
 
+.bottom-lace {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
+  width: 100vw;
+  height: 60px;
 
-    
+  background-image: url("lace-top.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+
+  transform: scaleY(-1);
+}
+
+   
   </style>
 </html>
